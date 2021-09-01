@@ -258,6 +258,7 @@
       s.webchat = s.webchat || function () {
         (s.webchat.q = s.webchat.q || []).push(arguments);
       };
+      window.webchat = s.webchat;
       t = z.createElement(c),
         a = z.getElementsByTagName(c)[0]; t.async = 1;
       t.src = 'https://develop.sz.chat/webchat/v2/webchat.js';
