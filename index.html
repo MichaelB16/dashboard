@@ -272,6 +272,9 @@
 
     setTimeout(() => {
       console.log("CLOSE",window.webchat);
+      window.webchat.on("onReady" , event => {
+        console.log(event);
+      })
     },10000)
 
     $(function () {
