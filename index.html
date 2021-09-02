@@ -277,9 +277,7 @@
 
     setTimeout(() => {
       console.log("CLOSE",window.webchat);
-      window.webchat("onReady" , event => {
-        console.log(event);
-      })
+      window.webchat('chatClose');
     },10000)
 
     $(function () {
