@@ -272,7 +272,7 @@
 
     setTimeout(() => {
       console.log("CLOSE",window.webchat);
-      window.webchat('chatClose',function(e) {
+      window.SZchat('onReady',function(e) {
         console.log("E:",e);
       });
     },30000)
