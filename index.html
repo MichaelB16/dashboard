@@ -270,8 +270,6 @@
       if (event.origin !== 'https://develop.sz.chat') return;
     });
 
-    window.webchat('chatOpen');
-
     setTimeout(() => {
       console.log("CLOSE",window.webchat);
       window.webchat('chatClose');
