@@ -264,8 +264,10 @@
       a.parentNode.insertBefore(t, a);
       s.webchat('cid', '612d67cdb61629001e4067af');
       s.webchat('host', h);
-      s.webchat("chatClose")
     })(window, document, 'script', 'https://develop.sz.chat');
+
+
+    window.webchat("chatClose");
 
     window.addEventListener("message", (event) => {
       if (event.origin !== 'https://develop.sz.chat') return;
