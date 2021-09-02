@@ -264,16 +264,14 @@
       a.parentNode.insertBefore(t, a);
       s.webchat('cid', '612d67cdb61629001e4067af');
       s.webchat('host', h);
-      })(window, document, 'script', 'https://develop.sz.chat');
+    })(window, document, 'script', 'https://develop.sz.chat');
 
     window.addEventListener("message", (event) => {
       if (event.origin !== 'https://develop.sz.chat') return;
     });
 
-    setTimeout(() => {
-      console.log("CLOSEd",window.webchat);
-      window.webchat('chatClose');
-    },60000)
+    window.webchat.on("onReady", event => console.log('event', event));
+
 
     $(function () {
 
