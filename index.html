@@ -295,11 +295,6 @@
       console.log("contruindo webchat");
     })
 
-    setTimeout(() => {
-      console.log("chat fechado!")
-      window.webchat.chatClose();
-    }, 30000)
-
     window.addEventListener("message", (event) => {
       if (event.origin !== 'https://develop.sz.chat') return;
       window.dataLayer = window.dataLayer || [];
@@ -307,7 +302,7 @@
       window.dataLayer.push({
         event:event.data
       });
-      
+
       console.log("Monitorando evento", event.data);
     });
 
