@@ -273,6 +273,8 @@
       if (event.origin !== 'https://develop.sz.chat') return;
     });
 
+    window.webchat('chatClose');
+
     setTimeout(() => {
       console.log("CLOSE",window.webchat);
       window.webchat("onReady" , event => {
