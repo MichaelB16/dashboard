@@ -45,7 +45,9 @@
     window.addEventListener("message", (event) => {
       if (event.origin !== 'https://develop.sz.chat') return;
       window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: event.data.action, message: event.data.message });
+      if(event.data.action === "chat-event"){
+        window.dataLayer.push({ event: event.data.action, message: event.data.message });
+      }
     });
   </script>
 </body>
