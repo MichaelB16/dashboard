@@ -58,19 +58,19 @@
     });
 
     
-    window.webchat("onReady", () => {
-      console.log("READY");
-      window.webchat.setOptions({
-        label: {
-          "enabled": true,
-          "text": "Posso ajudar?",
-          "theme": "default",
-          "closable": true,
-          "delay": "3000",
-          "showWhenOffline": false
-        }
-      });
-    });
+    // window.webchat("onReady", () => {
+    //   console.log("READY");
+    //   window.webchat.setOptions({
+    //     label: {
+    //       "enabled": true,
+    //       "text": "Posso ajudar?",
+    //       "theme": "default",
+    //       "closable": true,
+    //       "delay": "3000",
+    //       "showWhenOffline": false
+    //     }
+    //   });
+    // });
 
     window.addEventListener("message", (event) => {
       if (event.origin !== 'https://develop.sz.chat') return;
