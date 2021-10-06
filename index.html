@@ -29,7 +29,7 @@
   <!-- End Google Tag Manager (noscript) -->
   <h1>seu Website</h1>
   <!-- Código do webchat -->
-  <script>
+  <script type="text/javascript">
     (function (s, z, c, h, a, t) {
       s.webchat = s.webchat || function () {
         (s.webchat.q = s.webchat.q || []).push(arguments);
@@ -45,10 +45,8 @@
     window.addEventListener("message", (event) => {
       if (event.origin !== 'https://develop.sz.chat') return;
       window.dataLayer = window.dataLayer || [];
-      if(event.data.action === "chat-event"){
-        window.dataLayer.push({ event: event.data.action, message: event.data.message });
-      }
-    });
+      window.dataLayer.push({ event: event.data.action, message: event.data.message });
+    }, false);
   </script>
 </body>
 
